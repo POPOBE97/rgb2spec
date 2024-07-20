@@ -133,11 +133,11 @@ float rgb2spec_eval_precise(float coeff[RGB2SPEC_N_COEFFS], float lambda) {
     return rgb2spec_fma(.5f * x, y, .5f);
 }
 
-float rgb2spec_eval_fast(float coeff[RGB2SPEC_N_COEFFS], float lambda) {
-    float x = rgb2spec_fma(rgb2spec_fma(coeff[0], lambda, coeff[1]), lambda, coeff[2]),
-          y = _mm_cvtss_f32(_mm_rsqrt_ss(_mm_set_ss(rgb2spec_fma(x, x, 1.f))));
-    return rgb2spec_fma(.5f * x, y, .5f);
-}
+// float rgb2spec_eval_fast(float coeff[RGB2SPEC_N_COEFFS], float lambda) {
+//     float x = rgb2spec_fma(rgb2spec_fma(coeff[0], lambda, coeff[1]), lambda, coeff[2]),
+//           y = _mm_cvtss_f32(_mm_rsqrt_ss(_mm_set_ss(rgb2spec_fma(x, x, 1.f))));
+//     return rgb2spec_fma(.5f * x, y, .5f);
+// }
 
 #if defined(__SSE4_2__)
 static inline __m128 rgb2spec_fma128(__m128 a, __m128 b, __m128 c) {

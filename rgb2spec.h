@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stdint.h>
-#include <immintrin.h>
+// #include <immintrin.h>
 
 #ifdef __cplusplus
 extern "C"
