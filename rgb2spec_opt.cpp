@@ -330,9 +330,13 @@ int main(int argc, char **argv) {
 
                     int idx = ((l*res + k) * res + j)*res+i;
 
-                    out[3*idx + 0] = float(A*(sqr(c1)));
-                    out[3*idx + 1] = float(B*c1 - 2*A*c0*(sqr(c1)));
-                    out[3*idx + 2] = float(C - B*c0*c1 + A*(sqr(c0*c1)));
+                    // out[3*idx + 0] = float(A*(sqr(c1)));
+                    // out[3*idx + 1] = float(B*c1 - 2*A*c0*(sqr(c1)));
+                    // out[3*idx + 2] = float(C - B*c0*c1 + A*(sqr(c0*c1)));
+
+                    out[3*idx + 0] = float(A);
+                    out[3*idx + 1] = float(B);
+                    out[3*idx + 2] = float(C);
                     //out[3*idx + 2] = resid;
                 }
 
@@ -352,9 +356,13 @@ int main(int argc, char **argv) {
 
                     int idx = ((l*res + k) * res + j)*res+i;
 
-                    out[3*idx + 0] = float(A*(sqr(c1)));
-                    out[3*idx + 1] = float(B*c1 - 2*A*c0*(sqr(c1)));
-                    out[3*idx + 2] = float(C - B*c0*c1 + A*(sqr(c0*c1)));
+                    // out[3*idx + 0] = float(A*(sqr(c1)));
+                    // out[3*idx + 1] = float(B*c1 - 2*A*c0*(sqr(c1)));
+                    // out[3*idx + 2] = float(C - B*c0*c1 + A*(sqr(c0*c1)));
+
+                    out[3*idx + 0] = float(A);
+                    out[3*idx + 1] = float(B);
+                    out[3*idx + 2] = float(C);
                     //out[3*idx + 2] = resid;
                 }
             }
